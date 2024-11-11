@@ -1,37 +1,25 @@
-Follow-Only Plugin for RuneLite
-Plugin Name: Follow-Only
-Author: Jarrod Ferriss
+# Follow-Only Plugin
 
-Overview
-The Follow-Only plugin is a RuneLite plugin that enhances gameplay by restricting player movement. When enabled, this plugin prevents the character from moving independently, only allowing movement by following another player on an adjacent tile. This unique restriction adds a social and humorous dynamic to gameplay, creating a challenge that depends on the cooperation and positioning of other players for navigation.
+The **Follow-Only Plugin** for RuneLite restricts player movement, allowing the player to move only by using the **'follow'** feature on other players standing on adjacent tiles. This plugin is designed for those who want a unique and challenging way to navigate Gielinor, adding a social twist to movement and exploration in Old School RuneScape (OSRS).
 
-Features
-Movement Restriction: Players are unable to move freely, adding a unique layer of challenge and strategy.
-Follow-Only Mechanics: Movement is only possible by following another player on an adjacent tile.
-Increased Social Interaction: Adds a social element to the game, encouraging player interaction as the only way to navigate the game world.
-Installation
-To use this plugin, follow these steps:
+## Features
 
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/yourusername/follow-only.git
-Import the project into your preferred IDE, such as IntelliJ IDEA.
-Ensure you have the RuneLite client and SDK set up.
-Build and run the plugin within the RuneLite client.
-Usage
-Enable the Follow-Only plugin in your RuneLite client.
-Position yourself next to another player.
-Click "Follow" on the adjacent player to start moving.
-Note that all independent movement is disabled while this plugin is active. To move, find players who can lead you to your destination.
-Future Enhancements
-Planned updates include:
+- **Restricted Movement**: Disables the ability to move independently. The only way to traverse Gielinor is by following other players.
+- **Adjacent Tile Requirement**: The follow action is only enabled if the player is on an adjacent tile to another player.
+- **Improved Social Interaction**: Encourages cooperation and interaction with other players to progress in the game.
 
-Customizable Restrictions: Allow toggling additional restrictions for a more tailored experience.
-Logging Movement Patterns: Track and analyze movement patterns for further insights.
-Support for NPC Following: Expand the functionality to allow movement by following specific NPCs.
-Contributions
-Contributions are welcome! Feel free to open issues or submit pull requests to improve functionality or fix bugs. Please ensure all code follows the existing style and structure.
+## Purpose and Inspiration
 
-License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This plugin is intended for players looking to challenge themselves or create unique content, such as role-playing, YouTube series, or hardcore movement restrictions. The Follow-Only Plugin can add a layer of strategy, creativity, and humor to your OSRS gameplay!
+
+## Contributions
+
+Contributions are welcome! Feel free to submit issues or feature requests. Pull requests for bug fixes or enhancements are also encouraged.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Enjoy the social side of RuneScape with a twist—where every step requires teamwork!
