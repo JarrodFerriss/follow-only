@@ -57,12 +57,37 @@ public class FollowOnlyPlugin extends Plugin {
 			return;
 		}
 
+		// Check if it's an attack and allow ranged/magic attacks from a distance
+		if (event.getMenuOption().equals("Attack")) {
+			// Check if the player is using a ranged or magic weapon
+			if (isUsingRangedOrMagicWeapon()) {
+				WorldPoint targetPosition = getTargetPosition(event);
+				if (targetPosition != null && !isWithinOneTile(localPlayerPos, targetPosition)) {
+					sendChatMessage("Attacking from a distance.");
+					// Allow the attack from current position without moving closer
+					return;
+				}
+			}
+		}
+
 		// General distance check for all interactions with a valid target position
 		WorldPoint targetPosition = getTargetPosition(event);
 		if (targetPosition != null && !isWithinOneTile(localPlayerPos, targetPosition)) {
 			sendChatMessage("You are too far away to interact with this.");
 			event.consume(); // Cancel interaction if target is more than one tile away
 		}
+	}
+
+	private boolean isUsingRangedOrMagicWeapon() {
+		ItemContainer equipment = client.getItemContainer(InventoryID.EQUIPMENT);
+		if (equipment != null) {
+			Item weapon = equipment.getItem(EquipmentInventorySlot.WEAPON.getSlotIdx());
+			if (weapon != null) {
+				int weaponId = weapon.getId();
+				return WeaponData.isRangedWeapon(weaponId) || WeaponData.isMagicWeapon(weaponId);
+			}
+		}
+		return false;
 	}
 
 	private Player findPlayerByProximityAndName(WorldPoint localPlayerPos, MenuOptionClicked event) {
